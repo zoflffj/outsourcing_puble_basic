@@ -4,11 +4,6 @@
   white-space: pre-line;
 }
 
-@media (min-width: 1025px) {
-  .mo {
-    display: none;
-  }
-}
 
 /*--페이지--*/
 :root {
@@ -17,48 +12,197 @@
 }
 
 #body {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
-}
-#body > * {
-  flex: 0 0 auto;
-}
-#body .main {
-  flex: 1;
 }
 
-.main {
-  flex: 1;
-  overflow: hidden;
-  background-color: #FFFFFF;
+.main{
   height: 100%;
+  overflow: auto;
 }
-.main-inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.main-inner > * {
-  flex: 0 0 auto;
-}
-.main-con {
-  position: relative;
-  flex: 1;
-  overflow-y: auto;
-}
-.main-btn .btn-wrap {
+/*--헤더--*/
+.header {
+  z-index: 9999;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-}
-.main-btn .btn {
-  border-radius: 0;
   width: 100%;
-  height: 4rem;
+  background: #FFFFFF;
+}
+.header + .main{
+  padding-top: 154px;
+}
+.head{
+  border-bottom: 1px solid #ECEFF1;
+}
+.head-inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1080px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-inner .logo a{
+  display: block;
+}
+.head-inner .logo a img{
+  width: 80px;
+}
+.head-nav .head-menu{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.head-nav .head-menu .head-menu-li{
+  margin-right: 60px;
+}
+.head-nav .head-menu .head-menu-li:last-child{
+  margin-right: 0;
+}
+
+.header .gnb {
+  border-bottom: 1px solid #ECEFF1;
+  z-index: 30;
+}
+.header .gnb .gnb-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 1080px;
+  height: 76px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.header .gnb .gnb-inner .nav-gnb {
+  width: 100%;
+  height: 76px;
+  line-height: 76px;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li {
+  margin-right: 54px;
+  display: inline-block;
+  height: 76px;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li:nth-child(3) {
+  margin-right: 80px;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li a {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 76px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #212121;
+  font-weight: 400;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li a:after {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  border-bottom: 4px solid #246FFF;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li :hover, .header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li :hover:after, .header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li :active {
+  color: #246FFF;
   font-weight: 500;
+  width: 100%;
+  left: 0;
+}
+.header .gnb .gnb-inner .nav-gnb .nav-gnb-menu > li.on a {
+  color: #246FFF;
+  font-weight: 500;
+  width: 100%;
+  left: 0;
+  border-bottom: 4px solid #246FFF;
+}
+.header .gnb .gnb-inner .nav-favorite {
+  width: 35%; text-align: right; height: 76px; line-height: 76px;
+}
+.header .gnb .gnb-inner .nav-favorite .nav-favorite-menu > li {
+  margin-left: 30px;
+  display: inline-block;
+  font-size: 14px;
+  color: #999999;
+  font-weight: 500;
+}
+.header .gnb .gnb-inner .nav-favorite .nav-favorite-menu > li a {
+  display: block;
+  text-decoration: none;
+}
+.header .gnb .gnb-inner .nav-favorite .nav-favorite-menu > li:hover, .header .gnb .gnb-inner .nav-favorite .nav-favorite-menu > li:active, .header .gnb .gnb-inner .nav-favorite .nav-favorite-menu > li.on { color: #246FFF; }
+.header .gnb .gnb-inner .lnb {
+  position: absolute;
+  top: 154px;
+  left: 0;
+  display: none;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+.header .gnb .gnb-inner .lnb-inner {
+  position: relative;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1080px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 30px 0;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-lnb {
+  padding-top: 10px;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-lnb:nth-child(1) { width: 129px; -ms-flex-negative: 0; flex-shrink: 0; }
+.header .gnb .gnb-inner .lnb-inner .nav-lnb:nth-child(2) { width: 174px; -ms-flex-negative: 0; flex-shrink: 0; }
+.header .gnb .gnb-inner .lnb-inner .nav-lnb:nth-child(3) { width: 135px; -ms-flex-negative: 0; flex-shrink: 0; }
+.header .gnb .gnb-inner .lnb-inner .nav-lnb:nth-child(4) { width: 129px; -ms-flex-negative: 0; flex-shrink: 0; }
+.header .gnb .gnb-inner .lnb-inner .nav-lnb .nav-lnb-ttl {
+  height: auto;
+  font-size: 16px;
+  color: #212121;
+  font-weight: 500;
+  display: none;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-lnb ul li {
+  line-height: 30px;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-lnb ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #212121;
+  font-weight: 300;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-lnb ul li :hover {
+  color: #246FFF;
+}
+.header .gnb .gnb-inner .lnb-inner .nav-event {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 190px;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.header .gnb .gnb-inner .nav-gnb:hover + .lnb, .header .gnb .gnb-inner .lnb:hover {
+  opacity: 1;
+  display: block;
 }
 
 /*--클릭효과--*/
@@ -109,25 +253,22 @@
 }
 .tab .btn-wrap .btn-box {
   display: flex;
-  padding: 1.4rem 0 1.4rem 1.6rem;
+  padding: 14px 14px 16px;
   flex: 0 0 auto;
   justify-content: center;
   align-items: center;
 }
-.tab .btn-wrap .btn-box img {
-  width: 1.8rem;
-  height: 1.8rem;
-}
+
 .tab .btn-wrap .btn-box .txt {
-  margin-left: 0.6rem;
+  margin-left: 6px;
   color: #9E9E9E;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
 }
 .tab .btn-wrap button {
   position: relative;
-  height: 5rem;
-  font-size: 1.4rem;
+  height: 50px;
+  font-size: 14px;
   font-weight: 500;
   color: #CFD8DC;
 }
@@ -143,29 +284,6 @@
   width: 100%;
   height: 2px;
   background-color: #607D8B;
-}
-
-/*--헤더--*/
-.header {
-  width: 100%;
-  height: 5.4rem;
-  background: #FFFFFF;
-}
-.header .inner {
-  padding: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .inner .logo {
-  background: url("../images/logo.svg") no-repeat;
-  background-size: contain;
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.header .inner .left .h-btn {
-  width: 2.4rem;
-  height: 2.4rem;
 }
 
 /*--모달--*/
@@ -242,79 +360,79 @@
 .modal {
   display: flex;
   flex-direction: column;
-  min-width: 32rem;
-  max-width: 36rem;
+  min-width: 320px;
+  max-width: 360px;
   max-height: 80%;
   background: #FFFFFF;
-  border-radius: 1.2rem;
+  border-radius: 12px;
 }
 .modal-con {
-  padding: 1.6rem;
-  min-height: 6rem;
+  padding: 16px;
+  min-height: 60px;
   overflow-y: auto;
 }
 .modal-con .modal-txt {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 .modal-con .modal-txt .txt-ttl {
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
   width: 100%;
 }
 .modal-con .modal-txt .txt-con {
-  margin-top: 2.6rem;
+  margin-top: 26px;
   text-align: center;
   width: 100%;
 }
 .modal-con .modal-txt .txt-con > * {
-  margin-bottom: 0.4rem;
+  margin-bottom: 4px;
   width: 100%;
 }
 .modal-btn {
   flex: 0 0 auto;
 }
 .modal-btn .btn-wrap {
-  padding: 1rem 1.6rem 1.6rem 1.6rem;
+  padding: 10px 16px 16px 16px;
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 .modal-btn .btn {
-  border-radius: 0.4rem;
+  border-radius: 4px;
   width: 100%;
-  height: 4.6rem;
+  height: 46px;
   color: #FFFFFF;
   background: #246FFF;
   font-weight: 500;
 }
 
 .modal-btn .btn.bo {
-  margin-right: 1.6rem;
+  margin-right: 16px;
   background: #FFFFFF;
   border: 1px solid #CFD8DC;
   color: #246FFF;
 }
 
-/*----------폼--------------------------------------------------------------------------------*/
+/*--폼--*/
 .valid{
-  margin-top: 0.4rem;
+  margin-top: 4px;
   color: #FF5C5C;
 }
 .form {
   /*모든 꾸미는 값은 임시값 */
-  padding: 1.6rem;
+  padding: 16px;
 }
 .form-ul {
   display: flex;
   flex-direction: column;
 }
 .form-li {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 .form-li:last-child {
   margin-bottom: 0;
@@ -324,37 +442,37 @@
   background: #FFFFFF;
   border: 1px solid #246FFF;
   color: #246FFF;
-  height: 3.6rem;
-  font-size: 1.4rem;
+  height: 36px;
+  font-size: 14px;
 }
 .form-ttl {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 .form-in {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form-in.timer .label {
+.timer .label {
   position: relative;
   top: 0;
   left: 0;
 }
-.form-in.timer .label input {
-  padding-right: 4.6rem;
+.timer .label input {
+  padding-right: 46px;
 }
-.form-in.timer .label .time {
+.timer .label .time {
   position: absolute;
-  right: 1rem;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #246FFF;
 }
 .form-in button {
-  margin-left: 1rem;
+  margin-left: 10px;
 }
 
 /*label, button 모두 임시 값*/
@@ -362,11 +480,11 @@
   flex: 2;
 }
 .label input, .label textarea, .label select {
-  padding: 0.8rem;
+  padding: 8px;
   width: 100%;
   border: 1px solid #CFD8DC;
-  height: 3.6rem;
-  font-size: 1.4rem;
+  height: 36px;
+  font-size: 14px;
 }
 .label input::placeholder, .label textarea::placeholder, .label select::placeholder {
   color: #B0BEC5;
@@ -378,12 +496,12 @@
   background-color: #666;
 }
 .label select {
-  padding: 0 3rem 0 0.8rem;
+  padding: 0 30px 0 8px;
   background: url("../images/i-select.svg") no-repeat center right 8px;
-  background-size: 1.4rem;
+  background-size: 14px;
 }
 .label textarea {
-  height: 8rem;
+  height: 108px;
 }
 
 .chk-box .checkbox {
@@ -393,18 +511,18 @@
   display: inline-block;
 }
 .chk-box .checkbox input + .label {
-  padding-left: 2.6rem;
-  min-height: 2.6rem;
+  padding-left: 26px;
+  min-height: 26px;
   background: url("../images/chkbox.svg") no-repeat left top;
-  background-size: 2.6rem;
-  font-size: 1.4rem;
+  background-size: 26px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 2.6rem;
+  line-height: 26px;
 }
 .chk-box .checkbox input + .label > span {
   display: block;
-  padding-left: 0.4rem;
-  margin-top: 0.3rem;
+  padding-left: 4px;
+  margin-top: 3px;
 }
 .chk-box .checkbox input:checked + .label {
   background-image: url("../images/chkbox-on.svg");
@@ -417,25 +535,26 @@
   display: inline-block;
 }
 .radio-box .radio input + .label {
-  padding-left: 2.2rem;
+  padding-left: 22px;
   background: url("../images/rdobox.svg") no-repeat left center;
-  min-height: 2.2rem;
-  background-size: 2.2rem;
-  font-size: 1.4rem;
+  min-height: 22px;
+  background-size: 22px;
+  font-size: 14px;
   font-weight: 500;
 }
 .radio-box .radio input:checked + .label {
   background: url("../images/rdobox-on.svg") no-repeat left center;
-  background-size: 2.2rem;
+  background-size: 22px;
 }
 
+/*--버튼--*/
 .btn {
-  padding: 1.2rem;
+  padding: 12px;
   background: #246FFF;
   color: #FFFFFF;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 500;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 .btn-wrap {
   display: flex;
@@ -443,15 +562,15 @@
   width: 100%;
 }
 .btn-wrap .btn{
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 .btn-wrap .btn:last-child{
   margin-right: 0;
 }
 
 .btn-wrap.btm .btn {
-  padding: 1.6rem;
-  height: 5.6rem;
+  padding: 16px;
+  height: 56px;
 }
 .btn.bo {
   background: #FFFFFF;
@@ -464,10 +583,66 @@
 }
 
 /*--아이콘--*/
-*[class^=i_], *[class*=" i_"] {
+* i {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: top;
+  flex: 0 0 auto;
+}
+.i-menu{
+  background: url("../images/i-menu.svg");
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+
+/*----------------------------------------미디어쿼리 (반응형)--------------------------------------------------*/
+
+/*-PC: 1025px 이상에서의 보이는 부분-*/
+@media screen and (min-width: 1025px) {
+  .mobile-view {
+    display: none;
+  }
+  .tablet-view{
+    display: none;
+  }
+  .pc-view{
+    display: block;
+  }
+}
+/*Tablet: 401px 이상 1024px 이하-*/
+@media screen and (max-width: 1024px){
+  .mobile-view {
+    display: none;
+  }
+  .tablet-view{
+    display: block;
+  }
+  .pc-view{
+    display: none;
+  }
+  .head-inner{
+    padding: 16px;
+  }
+  .header + .main{
+    padding-top: 76px;
+  }
+}
+/*Mobile: 1025px 이상에서의 보이는 부분-*/
+@media screen and (max-width: 700px) {
+  .mobile-view {
+    display: block;
+  }
+  .tablet-view{
+    display: none;
+  }
+  .pc-view{
+    display: none !important;
+  }
 }

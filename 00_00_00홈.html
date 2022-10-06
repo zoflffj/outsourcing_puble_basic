@@ -12,29 +12,62 @@
     <title>title</title>
 </head>
 <body id="body" ontouchstart="">
+<!-- Header -->
 <header class="header">
-    <div class="inner">
-        <div class="left">
-            <button class="h-btn back"></button>
+    <!-- 로고, 서비스메뉴 -->
+    <section class="head">
+        <div class="head-inner">
+            <h1 class="logo"><a href=""><img src="static/images/logo.svg" alt="logo"></a></h1>
+            <nav class="head-nav">
+                <ul class="head-menu pc-view">
+                    <li class="head-menu-li"><a href="">메뉴</a></li>
+                    <li class="head-menu-li"><a href="">메뉴</a></li>
+                </ul>
+                <button class="menu mobile-view"><i class="i-menu"></i></button>
+            </nav>
         </div>
-        <div class="text">header</div>
-        <h1 class="logo"></h1>
-    </div>
+    </section>
+    <!-- GNB, Favorite menu -->
+    <section class="gnb pc-view">
+        <div class="gnb-inner">
+            <nav class="nav-gnb">
+                <ul class="nav-gnb-menu">
+                    <li><a>title</a></li>
+                    <li><a>title</a></li>
+                </ul>
+            </nav>
+            <!-- Sub Menu -->
+            <section class="lnb">
+                <div class="lnb-inner">
+                    <nav class="nav-lnb">
+                        <h2 class="nav-lnb-ttl">title</h2> <!--display: none; 처리 되어있어 보이지 않음-->
+                        <ul>
+                            <li><a href="">sub-title</a></li>
+                            <li><a href="">sub-title</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-lnb">
+                        <h2 class="nav-lnb-ttl">title</h2> <!--display: none; 처리 되어있어 보이지 않음-->
+                        <ul>
+                            <li><a href="">sub-title</a></li>
+                            <li><a href="">sub-title</a></li>
+                            <li><a href="">sub-title</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </section>
 </header>
-<div class="tab">
-    <div class="inner">
-        <div class="btn-wrap">
-            <button class="on" onclick="classList.toggle('on')"><span>아이디 찾기</span></button>
-            <button onclick="classList.toggle('on')"><span>비밀번호 찾기</span></button>
-        </div>
-    </div>
-</div>
-<main class="main" role="main">
-    <div class="main-inner">
-        <div class="main-con">
+<!--// Header -->
 
-        </div>
-    </div>
+<!-- Main -->
+<main class="main">
+    <!-- Visual -->
+    <section>
+
+    </section>
 </main>
+<!--// Main -->
 </body>
 </html>
