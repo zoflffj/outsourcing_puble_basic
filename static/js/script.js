@@ -5,89 +5,15 @@
 // document.getElementByID('ID)' <- id 가져오기
 // document.querySelector('.class') <- 쿼리 가져오기
 
-
-window.onload = function () {
-  var visit = document.getElementById('visit');
-  var care = document.getElementById('care');
-  var special = document.getElementById('special');
-
-  new Swiper('.visit-container', {
-    direction: 'horizontal',
-    loop: false,
-    autoHeight: true,
-    pagination: {
-      el: '.visit-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return (
-          '<span class="' + className + '">' + visitMenu[index] + '</span>'
-        );
-      }
-    },
-
-    navigation: {
-      nextEl: '.visit-button-next',
-      prevEl: '.visit-button-prev'
-    },
-    on: {
-      slideChange: function () {
-        visit.classList.toggle('bg_white');
-      }
-    }
-  });
-
-  new Swiper('.care-container', {
-    direction: 'horizontal',
-    loop: false,
-    autoHeight: true,
-    pagination: {
-      el: '.care-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + careMenu[index] + '</span>';
-      }
-    },
-
-    navigation: {
-      nextEl: '.care-button-next',
-      prevEl: '.care-button-prev'
-    },
-
-    on: {
-      slideChange: function () {
-        care.classList.toggle('bg_mint');
-      }
-    }
-  });
-
-  new Swiper('.special-container', {
-    direction: 'horizontal',
-    loop: false,
-    autoHeight: true,
-    pagination: {
-      el: '.special-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return (
-          '<span class="' + className + '">' + specialMenu[index] + '</span>'
-        );
-      }
-    },
-
-    navigation: {
-      nextEl: '.special-button-next',
-      prevEl: '.special-button-prev'
-    },
-    on: {
-      slideChange: function () {
-        special.classList.toggle('bg_white');
-      }
-    }
-  });
-};
-//스와이퍼 활성화
-//디자인팀에서 스와이퍼 세팅을 안 하지만 알아만 두세요.
-
+//bx slider 
+$(document).ready(function(){
+  $('.slider').bxSlider( {
+      auto: true,
+      pause: 3000,
+  }
+  );
+});
+//bx slider 끝
 
 var prevScrollpos = window.pageYOffset;
 

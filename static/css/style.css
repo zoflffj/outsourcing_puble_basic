@@ -597,10 +597,36 @@
   height: 24px;
 }
 
+/* swiper */
+.slider-wrap{
+  margin: 60px auto;
+  max-width: 1080px;
+  width: 100%;
+}
+.bx-wrapper{
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  -webkit-box-shadow: unset!important;
+  box-shadow: unset!important;
+  border: 1px solid #F4F7F9!important;
+  border-radius: 30px;
+  background: #fff;
+}
 
+.bx-wrapper img{
+  border-radius: 30px;
+}
 
+.bx-pager-link{
+  background: #ECEFF1!important;
+}
 
-
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #23241f!important;
+}
 
 /*----------------------------------------미디어쿼리 (반응형)--------------------------------------------------*/
 
@@ -646,3 +672,4 @@
     display: none !important;
   }
 }
+
