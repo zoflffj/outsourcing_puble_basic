@@ -7,9 +7,7 @@
     <list default="true" id="ecf12763-a675-449b-a682-7436a190dd1f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00_00_00홈.html" beforeDir="false" afterPath="$PROJECT_DIR$/00_00_00홈.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/editor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665032338172</updated>
       <workItem from="1665032339397" duration="8060000" />
-      <workItem from="1665040663652" duration="19522000" />
+      <workItem from="1665040663652" duration="20850000" />
     </task>
     <task id="LOCAL-00001" summary="header완료">
       <created>1665048072723</created>
@@ -67,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665048072723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="슬라이드 TT">
+      <created>1665124454723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665124454723</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +80,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="header완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="header완료" />
+    <MESSAGE value="슬라이드 TT" />
+    <option name="LAST_COMMIT_MESSAGE" value="슬라이드 TT" />
   </component>
 </project>

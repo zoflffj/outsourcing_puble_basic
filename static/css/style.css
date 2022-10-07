@@ -628,6 +628,47 @@
   background: #23241f!important;
 }
 
+.bx-controls-direction{
+  position: absolute;
+  right: 6px;
+  bottom: 16px;
+  display: flex;
+}
+.bx-wrapper .bx-controls-direction a {
+  position: unset!important;
+  top: unset!important;
+  margin-top: 0!important;
+  margin-right: 10px;
+  width: 32px!important;
+  height: 32px!important;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url("../images/rolling_button_left.svg") no-repeat !important;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0;
+}
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url("../images/rolling_button_right.svg") no-repeat !important;
+}
+
+footer{
+  width: 100%;
+  background: #ECEFF1;
+}
+.footer-inner{
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 1080px;
+  font-size: 14px;
+  color: #263238;
+}
 /*----------------------------------------미디어쿼리 (반응형)--------------------------------------------------*/
 
 /*-PC: 1025px 이상에서의 보이는 부분-*/
