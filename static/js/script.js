@@ -5,11 +5,26 @@
 // document.getElementByID('ID)' <- id 가져오기
 // document.querySelector('.class') <- 쿼리 가져오기
 
+//Scroll top
+$(document).ready(function(){
+  $('a[href="#"]').on('click',function(e){ //a가 가지고 있는 기본 성격을 지우겠다.
+    e.preventDefault(); //버벅거리지않고 부드럽게 하기 위해서 추가한듯 별차이없음.
+  });
+  $('#btn-up').on('click',function(){
+    $('html, body').animate({scrollTop:0},400);
+  });
+});
+
 //bx slider 
 $(document).ready(function(){
   $('.slider').bxSlider( {
       auto: true,
       pause: 3000,
+        minSlides: 2, // 슬라이드 여러장
+        maxSlides: 2, // 슬라이드 여러장
+        slideWidth: 800, // 슬라이드 width
+        slideMargin: 16, //슬라이드 간 간격
+        captions: true,
   }
   );
 });
